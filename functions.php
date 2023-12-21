@@ -17,4 +17,6 @@ foreach ($allFiles as $filename) {
 }
 
 /* HOOKS */
-add_action('admin_menu', 'glasse_social_settings_page_cb');
+add_action('init', 'glasse_register_menus');
+add_action('wp_enqueue_scripts', 'glasse_enqueue_cb');
+add_action('after_setup_theme', 'glasse_theme_support_cb');
